@@ -38,6 +38,8 @@
             p.card__p{
                 width: 100%;
                 margin: auto;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 30px;
             }
 
             .card__footer{
@@ -83,10 +85,12 @@
             .card__image{
                 grid-row:2/8;
                 grid-column:2/4;
-                border: 1px solid #2A3B4F;
+                /* border: 2px solid #2A3B4F; */
                 box-sizing: border-box;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 20px;
+                z-index: 1;
+                background: linear-gradient(to right, #2A3B4F 49.24%, #F26A44 49.84%);
             }
 
             .card--rightText{
@@ -104,8 +108,11 @@
             img.card__image__attendee{
                 width: auto;
                 height: auto;
-                max-width: 500px;
-                max-height: 500px;
+                max-width: 490px;
+                max-height: 490px;
+                margin: auto;
+                background: #fff;
+                border-radius: 20px;
             }
 
             .card--upperCaseText{
@@ -119,6 +126,40 @@
             p.card__event__year__text{
                 margin-top: 15px;
                 margin-left: 50px;
+                font-family: 'IBM Plex Mono', sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            p.card__details__personName.card__p span{
+                padding: 5px;
+                font-family: 'Viga', sans-serif;
+                font-size: 35px;
+            }
+
+            p.card__CBF{
+                font-family: 'Roboto', sans-serif;
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .card__theme p{
+                font-family: 'Viga', sans-serif;
+                font-size: 30px;
+            }
+
+            .card__theme p.card__theme__title{
+                font-size: 35px;
+            }
+
+            p.card__address, p.card__event__time__text, p.card__event__date__text{
+                font-family: 'Viga', sans-serif;
+                font-size: 20px;
+            }
+
+            .card__hashtags p{
+                font-family: 'Jua', sans-serif;
+                font-size: 24px;
             }
         </style>
     </head>
@@ -130,7 +171,7 @@
                         <span id="person__surname" class="card--redBackground"></span> <span id="person__name" class="card--redFont"></span>
                     </p>
                     <p class="card__p">is going to</p>
-                    <p class="card__p">
+                    <p class="card__p card__CBF">
                         <span class="card--redFont">Christian </span>
                         <span>Business </span>
                         <span class="card--redFont">Fair </span>
