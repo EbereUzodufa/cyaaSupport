@@ -57,9 +57,11 @@
                 grid-column:5/6;
             }
 
-            .card__address{
+            div.card__address{
                 grid-row:6/7;
                 grid-column:5/6;
+                display: grid;
+                grid-template-columns: 50px calc(100% - 50px);
             }
 
             .card__hashtags{
@@ -152,6 +154,16 @@
                 font-size: 35px;
             }
 
+            p.card__address{
+                grid-column: 2/3;
+            }
+
+            i.card__address_icon{
+                grid-column: 1/2;
+                font-size: 50px;
+                margin: auto;
+            }
+
             p.card__address, p.card__event__time__text, p.card__event__date__text{
                 font-family: 'Viga', sans-serif;
                 font-size: 20px;
@@ -183,7 +195,7 @@
                     <p class="card__theme_caption card--sentenceCaseText card__p card--blueFont">Maximizing Networking Tools for Business Growth</p>
                 </div>
                 <div class="card__address card--whiteFont card__div">
-                    <i class="card__address_icon"></i>
+                    <i class="fas fa-map-marker-alt card__address_icon"></i>
                     <p class="card__address card--rightText card__p">Bluehost, 1500 North Priest Drive Suite 200, 2nd Floor Tempe, AZ 85281. </p>
                 </div>
                 <div class="card__event__year card--redBackground card__div">
