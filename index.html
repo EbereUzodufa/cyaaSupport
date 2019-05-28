@@ -268,6 +268,21 @@
             imgPerson.src = imgSrc;
             txtSurname.innerHTML = surname;
             txtName.innerHTML = name;
+
+            html2canvas(imageContainer,{
+                allowTaint : true
+            }).then(function(canvas) {
+
+                let link = document.createElement("a");
+                document.body.appendChild(link);
+                
+                const perName = surname +"-"+ name;
+                const fileName = perName.replace(/ +/g, "");
+                link.download = perName + '#CBF2019#MaximizingNetworkingTools4BusinessGrowth.png';
+                link.href = canvas.toDataURL("image/png");
+                link.target = '_blank';s
+                link.click();
+            });
         }
     </script>
 </body>
