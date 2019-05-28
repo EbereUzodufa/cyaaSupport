@@ -251,6 +251,24 @@
             }
 
         });
+
+        const geneCBFSupport = (name, surname, imgSrc) =>{
+            const iframeInnerDoc = iframe.contentWindow.document.children[0];
+
+            const txtSurname = iframeInnerDoc.querySelector("#person__surname");
+            const txtName = iframeInnerDoc.querySelector("#person__name");
+            const imgPerson = iframeInnerDoc.querySelector("#person__img");
+            const imageContainer = iframeInnerDoc.querySelector(".card"); // Article card
+
+            console.log('txtName', txtName);
+            console.log('txtSurname', txtSurname);
+            console.log('imgPerson', imgPerson);
+            console.log('imageContainer', imageContainer);
+
+            imgPerson.src = imgSrc;
+            txtSurname.innerHTML = surname;
+            txtName.innerHTML = name;
+        }
     </script>
 </body>
 </html>
