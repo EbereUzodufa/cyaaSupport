@@ -292,6 +292,7 @@
             html2canvas(imageContainer,{
                 allowTaint : true
             }).then(function(canvas) {
+                setTimeout(hideback, 10);
 
                 let link = document.createElement("a");
                 document.body.appendChild(link);
@@ -300,7 +301,7 @@
                 const fileName = perName.replace(/ +/g, "");
                 link.download = perName + '#CBF2019#MaximizingNetworkingTools4BusinessGrowth.png';
                 link.href = canvas.toDataURL("image/png");
-                link.target = '_blank';s
+                link.target = '_blank';
                 link.click();
             });
         }
