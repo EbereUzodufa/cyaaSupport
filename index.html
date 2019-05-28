@@ -223,7 +223,34 @@
         const preview = document.getElementById("preview");
         const inputSurname = document.getElementById("your-surname");
         const inputName = document.getElementById("your-name");
+        const inputImg = document.getElementById("your-img");
         const iframe = document.getElementById('iframe');
+
+        btn.addEventListener("click", function(event){
+            event.preventDefault();
+
+            if (inputName.value == "" || inputSurname.value == "" || inputImg.value == "") {
+                if (inputName.value == "" ) {
+                    //Check if it's Name
+                    alert('Please provide your first name in the first name field');
+                } else if (inputName.value == "" ) {
+                    //Check if it's Surname
+                    alert('Please provide your first surname in the first surname field');
+                } else if (inputImg.value == "") {
+                    //Check if it's Image
+                    alert('Please provide your desire image in the image field');
+                }
+
+            } else{
+                iframe.setAttribute('aria-hidden', false);
+
+                const name = inputName.value;
+                const surname = inputSurname.value;
+                const imgSrc = preview.src;
+
+            }
+
+        });
     </script>
 </body>
 </html>
