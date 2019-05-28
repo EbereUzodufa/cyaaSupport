@@ -242,6 +242,26 @@
             }
         }
 
+        const voteOfThanks = () =>{
+            const mainArticle = document.querySelector('article.goingToCBF');
+            const form = document.querySelector('form');
+            const div = document.createElement('div');
+            const p = document.createElement('p');
+            const name = inputName.value;
+            const surname = inputSurname.value;
+
+            form.style.display = "none";
+
+            div.setAttribute('style','width: 100%; display: flex; flex-wrap: wrap; padding: 20px 0px; margin:auto; align-self: center;')
+
+            p.classList.add('thanks');
+            p.innerHTML =`Thank you, <span>${name} ${surname}</span> for supporting our cause.<br>You can also share this image on social media. Kindly use the hash tag <ul class="hashtag-list"><li>#ChristianBusinessFair</li><li>#CBF2019</li><li>CBF</li><li>#MaximizingNetworkingTools4BusinessGrowth</li></ul>`;
+
+            div.append(p);
+
+            mainArticle.append(div);
+        }
+
         const hideback = () =>{
             iframe.setAttribute('aria-hidden', true);
         }
