@@ -241,7 +241,11 @@
                 }
             }
         }
-        
+
+        const hideback = () =>{
+            iframe.setAttribute('aria-hidden', true);
+        }
+
         btn.addEventListener("click", function(event){
             event.preventDefault();
 
