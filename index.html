@@ -255,7 +255,7 @@
                     alert('Please provide your first name in the first name field');
                 } else if (inputName.value == "" ) {
                     //Check if it's Surname
-                    alert('Please provide your first surname in the first surname field');
+                    alert('Please provide your surname in the surname field');
                 } else if (inputImg.value == "") {
                     //Check if it's Image
                     alert('Please provide your desire image in the image field');
@@ -268,9 +268,8 @@
                 const surname = inputSurname.value;
                 const imgSrc = preview.src;
 
+                geneCBFSupport(name, surname, imgSrc);
             }
-
-            geneCBFSupport(name, surname, imgSrc);
         });
 
         const geneCBFSupport = (name, surname, imgSrc) =>{
