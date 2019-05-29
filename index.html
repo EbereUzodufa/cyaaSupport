@@ -115,6 +115,7 @@
             text-transform: capitalize;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 50px;
+            height: 3em;
         }
 
         button#download-btn:hover{
@@ -264,10 +265,10 @@
         }
 
         img.card__image__attendee{
-            width: auto;
-            height: auto;
-            max-width: 490px;
-            max-height: 490px;
+            /* width: auto;
+            height: auto; */
+            width: 490px;
+            height: 490px;
             margin: auto;
             background: #fff;
             border-radius: 20px;
@@ -332,13 +333,13 @@
             font-size: 24px;
         }
 
-        @media screen and (min-height: 411px){
+        /* @media screen and (min-height: 411px){
             body{
                 height:100vh;
             }
-        }
+        } */
         
-        @media screen and (min-width: 1000px){
+        @media screen and (min-width: 1000px) and (min-height: 411px){
             section{
                 width: 450px;
                 padding: 0px 25px;
@@ -377,6 +378,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+                height:100vh;
             }
 
             article.goingToCBF {
@@ -406,7 +408,7 @@
                     <div class="goingToCBF__form__field">
                             <img id="preview" src="" alt="">
                         </div>
-		            <button id="download-btn">Yes I'm Going to CBF'19</button>
+		            <button id="download-btn" role="button">Yes I'm Going to CBF'19</button>
                 </form>
             </article>
             <article id="iframe" aria-hidden="true">
