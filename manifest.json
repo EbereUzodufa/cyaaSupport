@@ -1,0 +1,12 @@
+{
+    "name": "cbf19",
+    "short_name": "CBF'19",
+    "description": "Indicate if you are attending CBF 2019 and get a card for more awareness.",
+    "theme_color": "#F26A44",
+    "background_color": "#2A3B4F",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "/",
+    "lang": "en-US",
+    "scope": "/"
+  }
