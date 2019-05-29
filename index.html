@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <link rel="manifest" href="manifest.json"/>
+    <meta name="theme-color" content="#F26A44">
     <script src="assets/html2canvas.js"></script>
     <style>
 
@@ -510,6 +511,20 @@
         const inputName = document.getElementById("your-name");
         const inputImg = document.getElementById("your-img");
         const iframe = document.getElementById('iframe');
+
+        /*Adding service Worker*/
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                .catch(function(err) {
+                        console.log('ServiceWorker registration failed: ' + err);
+            });
+            });
+        };
 
         function previewFile(){
             //To preview image
