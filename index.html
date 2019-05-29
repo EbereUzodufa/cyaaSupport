@@ -122,7 +122,7 @@
             color: #F26A44;
         }
 
-        iframe.card {
+        article#iframe {
             width: 1px;
             height: 1px;
             padding: 0px;
@@ -137,6 +137,7 @@
             display: grid;
         }
 
+        /* Vote of thanks */
         p.thanks {
             color: #fff;
             font-size: 1.1em;
@@ -148,12 +149,187 @@
         p.thanks span {
             color: #F26A44;
             font-weight: bold;
+            text-transform: capitalize;
         }
 
         ul.hashtag-list li{
             padding: 5px;
             width: 100%;
             text-align: left;
+        }
+
+        /* Card CSS */
+        article.card{
+            height: 650px;
+            width: 1200px;
+            background: #2A3B4F;
+            display: grid;
+            grid-template-columns: 50px 250px 250px 82px calc(100% - (550px + 81px + 82px)) 81px;
+            grid-template-rows: 50px 211px 20px 121px 20px 83px 45px 90px 10px;
+        }
+
+        div.card__div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card--redBackground{
+            background: #F26A44;
+        }
+
+        .card--redFont{
+            color: #F26A44;
+        }
+
+        .card--whiteFont{
+            color: #fff;
+        }
+
+        .card--blueFont{
+            color: #2A3B4F;
+        }
+
+        p.card__p{
+            width: 100%;
+            margin: auto;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 30px;
+        }
+
+        .card__footer{
+            grid-row:9/10;
+            grid-column:1/7;
+        }
+
+        .card__details{
+            grid-row:2/3;
+            grid-column:5/6;
+        }
+
+        .card__theme{
+            grid-row:4/5;
+            grid-column:5/6;
+        }
+
+        div.card__address{
+            grid-row:6/7;
+            grid-column:5/6;
+            display: grid;
+            grid-template-columns: 50px calc(100% - 50px);
+        }
+
+        .card__hashtags{
+            grid-row:8/9;
+            grid-column:5/6;
+        }
+
+        .card__event__year{
+            grid-row:1/5;
+            grid-column:1/3;
+        }
+
+        .card__event__time{
+            grid-row:8/9;
+            grid-column:2/3;
+        }
+
+        .card__event__date{
+            grid-row:8/9;
+            grid-column:3/4;
+        }
+
+        .card__image{
+            grid-row:2/8;
+            grid-column:2/4;
+            /* border: 2px solid #2A3B4F; */
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            z-index: 1;
+            background: linear-gradient(to right, #2A3B4F 49.24%, #F26A44 49.84%);
+        }
+
+        .card--rightText{
+            text-align: right;
+        }
+
+        .card--leftText{
+            text-align: left;
+        }
+
+        .card--centerText{
+            text-align: center;
+        }
+
+        img.card__image__attendee{
+            width: auto;
+            height: auto;
+            max-width: 490px;
+            max-height: 490px;
+            margin: auto;
+            background: #fff;
+            border-radius: 20px;
+        }
+
+        .card--upperCaseText{
+            text-transform: uppercase;
+        }
+
+        .card--sentenceCaseText{
+            text-transform: capitalize;
+        }
+
+        p.card__event__year__text{
+            margin-top: 15px;
+            margin-left: 50px;
+            font-family: 'IBM Plex Mono', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p.card__details__personName.card__p span{
+            padding: 5px;
+            font-family: 'Viga', sans-serif;
+            font-size: 35px;
+        }
+
+        p.card__CBF{
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .card__theme p{
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+        }
+
+        .card__theme p.card__theme__title{
+            font-family: 'Viga', sans-serif;
+            font-size: 35px;
+        }
+
+        p.card__address{
+            grid-column: 2/3;
+        }
+
+        .card__address_icon{
+            grid-column: 1/2;
+            width: 50px;
+            fill: #fff;
+            margin: auto;
+        }
+
+        p.card__address, p.card__event__time__text, p.card__event__date__text{
+            font-family: 'Viga', sans-serif;
+            font-size: 20px;
+        }
+
+        .card__hashtags p{
+            font-family: 'Jua', sans-serif;
+            font-size: 24px;
         }
 
         @media screen and (min-height: 411px){
@@ -233,8 +409,92 @@
 		            <button id="download-btn">Yes I'm Going to CBF'19</button>
                 </form>
             </article>
-            <article>
-                <iframe id="iframe" src="card.html" aria-hidden="true" frameborder="0" class="card"></iframe>
+            <article id="iframe" aria-hidden="true">
+                <!-- <iframe  src="card.html" frameborder="0" class="card"></iframe> -->
+                <article class="card">
+                    <div class="card__details card--centerText card--whiteFont card__div">
+                        <p class="card__details__personName card__p card--sentenceCaseText">
+                            <span id="person__surname" class="card--redBackground"></span> <span id="person__name" class="card--redFont"></span>
+                        </p>
+                        <p class="card__p">is going to</p>
+                        <p class="card__p card__CBF">
+                            <span class="card--redFont">Christian </span>
+                            <span>Business </span>
+                            <span class="card--redFont">Fair </span>
+                            <span>2019</span>
+                        </p>
+                    </div>
+                    <div class="card__theme card--centerText card__div card--redBackground">
+                        <p class="card__theme__title card--whiteFont card--upperCaseText card__p">Theme</p>
+                        <p class="card__theme_caption card--sentenceCaseText card__p card--blueFont">Maximizing Networking Tools for Business Growth</p>
+                    </div>
+                    <div class="card__address card--whiteFont card__div">
+                        <svg version="1.1" id="Capa_1" class="card__address_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                            <g>
+                                <path d="M30,26c3.86,0,7-3.141,7-7s-3.14-7-7-7s-7,3.141-7,7S26.14,26,30,26z M30,14c2.757,0,5,2.243,5,5s-2.243,5-5,5
+                                    s-5-2.243-5-5S27.243,14,30,14z"/>
+                                <path d="M29.823,54.757L45.164,32.6c5.754-7.671,4.922-20.28-1.781-26.982C39.761,1.995,34.945,0,29.823,0
+                                    s-9.938,1.995-13.56,5.617c-6.703,6.702-7.535,19.311-1.804,26.952L29.823,54.757z M17.677,7.031C20.922,3.787,25.235,2,29.823,2
+                                    s8.901,1.787,12.146,5.031c6.05,6.049,6.795,17.437,1.573,24.399L29.823,51.243L16.082,31.4
+                                    C10.882,24.468,11.628,13.08,17.677,7.031z"/>
+                                <path d="M42.117,43.007c-0.55-0.067-1.046,0.327-1.11,0.876s0.328,1.046,0.876,1.11C52.399,46.231,58,49.567,58,51.5
+                                    c0,2.714-10.652,6.5-28,6.5S2,54.214,2,51.5c0-1.933,5.601-5.269,16.117-6.507c0.548-0.064,0.94-0.562,0.876-1.11
+                                    c-0.065-0.549-0.561-0.945-1.11-0.876C7.354,44.247,0,47.739,0,51.5C0,55.724,10.305,60,30,60s30-4.276,30-8.5
+                                    C60,47.739,52.646,44.247,42.117,43.007z"/>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+                        <p class="card__address card--rightText card__p">Bluehost, 1500 North Priest Drive Suite 200, 2nd Floor Tempe, AZ 85281. </p>
+                    </div>
+                    <div class="card__event__year card--redBackground card__div">
+                        <p class="card__event__year__text card--leftText card--whiteFont card__p">CBF'19</p>
+                    </div>
+                    <div class="card__image card__div">
+                        <img id="person__img" class="card__image__attendee">
+                    </div>
+                    <div class="card__event__time card__div">
+                        <p class="card__event__time__text card--whiteFont card__p card--leftText">Time: <span class="card__event__time__text__duration card--redFont">9 AM - 6 PM</span></p>
+                    </div>
+                    <div class="card__event__date card__div">
+                        <p class="card__event__date__text card--whiteFont card--rightText  card__p">Date: <span class="card__event__date__text__period card--redFont">15th - 17th Novernmber 2019</span></p>
+                    </div>
+                    <div class="card__hashtags card--centerText card--redFont card__div">
+                        <p class="card__event__hashtag card--whiteFont card__p">#CBF2019</p>
+                        <p class="card__event__hashtag card__p">#ChristianBusinessFair <span class="card--whiteFont">#CBF</span></p>
+                        <p class="card__event__hashtag card__p">#MaximizingNetworkingTools4BusinessGrowth</p>
+                    </div>
+                    <div class="card__footer card--redBackground card__div"></div>
+                </article>
             </article>
         </section>
     </main>
@@ -314,12 +574,12 @@
         });
 
         const geneCBFSupport = (name, surname, imgSrc) =>{
-            const iframeInnerDoc = iframe.contentWindow.document.children[0];
+            // const iframeInnerDoc = iframe.contentWindow.document.children[0];
 
-            const txtSurname = iframeInnerDoc.querySelector("#person__surname");
-            const txtName = iframeInnerDoc.querySelector("#person__name");
-            const imgPerson = iframeInnerDoc.querySelector("#person__img");
-            const imageContainer = iframeInnerDoc.querySelector(".card"); // Article card
+            const txtSurname = document.querySelector("#person__surname");
+            const txtName = document.querySelector("#person__name");
+            const imgPerson = document.querySelector("#person__img");
+            const imageContainer = document.querySelector(".card"); // Article card
 
             console.log('txtName', txtName);
             console.log('txtSurname', txtSurname);
