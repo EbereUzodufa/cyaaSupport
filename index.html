@@ -137,6 +137,25 @@
             display: grid;
         }
 
+        p.thanks {
+            color: #fff;
+            font-size: 1.1em;
+            width: 100%;
+            word-break: break-word;
+            text-align: center;
+        }
+
+        p.thanks span {
+            color: #F26A44;
+            font-weight: bold;
+        }
+
+        ul.hashtag-list li{
+            padding: 5px;
+            width: 100%;
+            text-align: left;
+        }
+
         @media screen and (min-height: 411px){
             body{
                 height:100vh;
@@ -253,10 +272,10 @@
 
             form.style.display = "none";
 
-            div.setAttribute('style','width: 100%; display: flex; flex-wrap: wrap; padding: 20px 0px; margin:auto; align-self: center;')
+            div.setAttribute('style','width: 100%; display: flex; flex-wrap: wrap; padding: 20px 0px; margin: 10px auto;')
 
             p.classList.add('thanks');
-            p.innerHTML =`Thank you, <span>${name} ${surname}</span> for supporting our cause.<br>You can also share this image on social media. Kindly use the hash tag <ul class="hashtag-list"><li>#ChristianBusinessFair</li><li>#CBF2019</li><li>CBF</li><li>#MaximizingNetworkingTools4BusinessGrowth</li></ul>`;
+            p.innerHTML =`Thank you, <span>${name} ${surname}</span> for supporting our cause.<br>You can also share this image on social media. Kindly use the hash tag <ul class="hashtag-list"><li>#ChristianBusinessFair</li><li>#CBF2019</li><li>#CBF</li><li>#MaximizingNetworkingTools4BusinessGrowth</li></ul>`;
 
             div.append(p);
 
