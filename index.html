@@ -613,7 +613,6 @@
             html2canvas(imageContainer,{
                 allowTaint : true
             }).then(function(canvas) {
-                setTimeout(hideback, 10);
 
                 let link = document.createElement("a");
                 document.body.appendChild(link);
@@ -625,6 +624,8 @@
                 link.target = '_blank';
                 link.click();
             });
+            
+            setTimeout(hideback, 10);
         }
     </script>
 </body>
