@@ -623,8 +623,10 @@
                 link.href = canvas.toDataURL("image/png");
                 link.target = '_blank';
                 link.click();
+
+                alert('File downloaded as ' + link.download);
             });
-            
+
             setTimeout(hideback, 10);
         }
     </script>
