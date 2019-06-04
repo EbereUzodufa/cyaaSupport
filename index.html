@@ -570,11 +570,11 @@
             mainArticle.append(div);
         }
 
-        const hideback = () =>{
+        const hideback = (msg) =>{
             iframe.setAttribute('aria-hidden', true);
             voteOfThanks();
             // alert('File downloaded. Check download history');
-            console.log('File downloaded. Check download history');
+            console.log('File downloaded as ' + msg + '. Check download history');
         }
 
         btn.addEventListener("click", function(event){
@@ -635,8 +635,8 @@
                 link.click();
 
                 resolve(link.download);
-            }).then(function(){
-                hideback();
+            }).then(function(resp){
+                hideback(resp);
             }).catch(function(error){
                 console.log('Error msg', error);
             });
