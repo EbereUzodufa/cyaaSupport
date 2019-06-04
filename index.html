@@ -565,6 +565,7 @@
         const hideback = () =>{
             iframe.setAttribute('aria-hidden', true);
             voteOfThanks();
+            alert('File downloaded as ' + link.download);
         }
 
         btn.addEventListener("click", function(event){
@@ -624,8 +625,7 @@
                 link.target = '_blank';
                 link.click();
             });
-            alert('File downloaded as ' + link.download);
-            setTimeout(hideback, 100);
+            setTimeout(hideback, 10);
         }
     </script>
 </body>

@@ -4,7 +4,7 @@ const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineItemCached = "offline.html";
 const offlineItemCached = [
-  'index.html',
+  // 'index.html', //I can't cache the index.html for now. I need it to make life better for me.
   'manifest.json',
   'assets/html2canvas.js',
   'CBF-web.jpg',
